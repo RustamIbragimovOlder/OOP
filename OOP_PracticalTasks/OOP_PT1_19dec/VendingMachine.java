@@ -1,4 +1,4 @@
-package OOP_Seminars.OOP_Sem1_13dec;
+package OOP_PracticalTasks.OOP_PT1_19dec;
 
 // import java.util.HashMap;
 
@@ -12,4 +12,6 @@ abstract public class VendingMachine {
 
     public abstract void displayingListProducts();
 
+
 }
+

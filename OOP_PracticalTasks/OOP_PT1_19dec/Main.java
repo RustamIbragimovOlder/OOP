@@ -1,52 +1,37 @@
-// 1. Выявите и реализуйте классы для следующей задачи.
-// Пропишите необходимый минимум полей и методов.
-// Пока что оставьте методы пустыми.
-// Торговый автомат содержит в себе набор товаров.
-// Покупатель вводит номер товара. Автомат высвечивает стоимость товара.
-// Покупатель его оплачивает.
-// Из лотка выпадает заказанный товар.
+// Создайте унаследованный класс ГорячийНапиток с дополнительным полем int температура.
+// Создайте класс АвтоматГорячихНапитков, реализующий интерфейс ТорговыйАвтомат
+// и реализуйте перегруженный метод getProduct(int name, int volume, int temperature),
+// выдающий продукт, соответствующий имени, объему и температуре.
+// В main проинициализируйте несколько ГорячихНапитков и АвтоматГорячихНапитков
+// и позвольте покупателю купить товар.
 
-// Инкапсуляция
-// 2. Доработайте задание:
-// Проверьте все модификаторы видимости в ваших классах.
-// Пропишите тела методов. Напишите main(), который демонстрирует,
-// как работает торговый автомат.
-
-// Наследование
-// 3. Создайте несколько классов товаров.
-// Они все наследуют от родительского класса Product.
-// Товары обладают дополнительными характеристиками, которые отображаются в toString ().
-// Загрузите в автомат много разнообразных товаров.
-
-// Полиморфизм
-// 4. Создайте три класса торговых автоматов.
-// Используйте переопределение методов в детских классах.
-// Большой торговый автомат — допускаются коды товаров от 0 до 99.
-// Средний торговый автомат — допускаются коды товаров от 0 до 49.
-// Торговый автомат, загруженный одним типом товаров.
-// В этом случае нет нужды указывать код товара.
-
-
-package OOP_Seminars.OOP_Sem1_13dec;
+package OOP_PracticalTasks.OOP_PT1_19dec;
 
 public class Main {
     public static void main (String[] args) {
         
-        VkusVendingMachine vendingMachine = new VkusVendingMachine();
-        
-        vendingMachine.addProduct(1, new Product("Lays", 12345, 49, 20));
-        vendingMachine.addProduct(2, new Product("Cola", 11111, 299, 1));
-        vendingMachine.addProduct(3, new Product("Lipton", 22222, 99, 10));
-        vendingMachine.addProduct(4, new Product("Milka", 15643, 150, 5));
+        СoldGoodsVendingMachine coldGoodsVendingMachine = new СoldGoodsVendingMachine();
+        HotDrinkVendingMachine hotDrinkVendingMachine = new HotDrinkVendingMachine();
 
-        vendingMachine.displayingListProducts();
+        coldGoodsVendingMachine.addProduct(1, new Product("чипсы", "Lays", 10001, 49.55f, 0.2f, 20));
+        coldGoodsVendingMachine.addProduct(2, new Product("чипсы", "Русская картошка", 10002, 40.70f, 0.2f, 15));
+        coldGoodsVendingMachine.addProduct(3, new Product("чипсы", "Pringles", 10003, 99.99f, 0.3f, 10));
+        coldGoodsVendingMachine.addProduct(4, new Product("шоколад", "Аленка", 10004, 75.9f, 0.1f, 9));
+        coldGoodsVendingMachine.addProduct(5, new Product("шоколад", "Ritter Sport", 10005, 115.9f, 0.1f, 5));
+        coldGoodsVendingMachine.addProduct(6, new Product("шоколад", "Snickers", 10006, 80.9f, 0.1f, 7));
+        
+        hotDrinkVendingMachine.addHotDrink(7, new HotDrink("кофе", "Paulig Arabica", 10007, 35.4f, 0.2f, 35, 75));
+        hotDrinkVendingMachine.addHotDrink(8, new HotDrink("чай", "Три слона", 10008, 15.3f, 0.2f, 42, 75));
+        hotDrinkVendingMachine.addHotDrink(9, new HotDrink("какао", "Royal Forest", 10009, 28.75f, 0.2f, 15, 75));
+        hotDrinkVendingMachine.addHotDrink(10, new HotDrink("компот", "Ягодный", 10010, 12.5f, 0.2f, 22, 70));
+    
+        // coldGoodsVendingMachine.displayingListProducts();
+        hotDrinkVendingMachine.displayingListProducts();
         System.out.println("Введите номер товара => ");
-        int number = vendingMachine.enterNumber();
-        Product product = vendingMachine.showProduct(number);
-        vendingMachine.productBuy(product);
+        // int number = coldGoodsVendingMachine.enterNumber();
+        int number = hotDrinkVendingMachine.enterNumber();
+        HotDrink hotDrink = (HotDrink) hotDrinkVendingMachine.showProduct(number);
+        hotDrinkVendingMachine.productBuy(hotDrink);
 
     }
 }
-
-
-

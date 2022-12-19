@@ -1,32 +1,33 @@
-package OOP_Seminars.OOP_Sem1_13dec;
+package OOP_PracticalTasks.OOP_PT1_19dec;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class VkusVendingMachine extends VendingMachine {
 
-    private Map<Integer, Product> productsMap = new HashMap<>();
+public class HotDrinkVendingMachine extends VendingMachine {
+    
+    
+    private Map<Integer, HotDrink> hotDrinksMap = new HashMap<>();
     private Scanner scanner = new Scanner(System.in);
-
-    // public VkusVendingMachine() {
-    // }
-
-    public void addProduct (int key, Product product) {
-        productsMap.put(key, product);
+    
+    public void addHotDrink (int key, HotDrink hotDrink) {
+        hotDrinksMap.put(key, hotDrink);
+        
     }
+
 
     @Override
     public int enterNumber() {
-        int productNumber = scanner.nextInt();
-        System.out.println("Покупатель ввел номер " + productNumber);
-        return productNumber;
+        int hotDrinkNumber = scanner.nextInt();
+        System.out.println("Покупатель ввел номер " + hotDrinkNumber);
+        return hotDrinkNumber;
     }
 
     @Override
-    public Product showProduct (int productNumber) {
-        System.out.println("Выбранный продукт: " + productsMap.get(productNumber));
-        return productsMap.get(productNumber);
+    public HotDrink showProduct (int hotDrinkNumber) {
+        System.out.println("Выбранный продукт: " + hotDrinksMap.get(hotDrinkNumber));
+        return hotDrinksMap.get(hotDrinkNumber);
     }
 
     @Override
@@ -63,8 +64,9 @@ public class VkusVendingMachine extends VendingMachine {
     @Override
     public void displayingListProducts() {
         System.out.println("В автомате следующие товары => ");
-        for (HashMap.Entry<Integer, Product> item : productsMap.entrySet()) {
-            System.out.printf("%d - %s\n", item.getKey(), item.getValue().getName());
+        for (HashMap.Entry<Integer, HotDrink> item : hotDrinksMap.entrySet()) {
+            System.out.printf("%d - %s %s температура %d град.\n", item.getKey(), item.getValue().getType(), item.getValue().getName(), item.getValue().getTemperature());
         } 
     }
+
 }
