@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "OOP_Seminars.OOP_Sem7_20jan.task2.Main",
+            "projectName": "OOP_cffd4be7"
+        },
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/OOP_Seminars/OOP_Sem7_20jan/csharp/bin/Debug/net6.0/csharp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/OOP_Seminars/OOP_Sem7_20jan/csharp",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}

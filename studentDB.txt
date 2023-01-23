@@ -1,0 +1,4 @@
+Ivan, Ivanov, 25, 1, 3.50
+Petr, Petrov, 35, 2, 4.00
+Sidor, Sidorov, 45, 3, 4.50
+new, Ivanov, 21, 3, 4.20
