@@ -5,6 +5,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "OOP_PracticalTasks.OOP_PT6_23jan.task1.Main",
+            "projectName": "OOP_cffd4be7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "OOP_Seminars.OOP_Sem7_20jan.task2.Main",
             "projectName": "OOP_cffd4be7"
         },
