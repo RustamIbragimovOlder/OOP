@@ -7,14 +7,14 @@ import Ex002Phonebook.Core.Models.Contact;
 
 public class Phonebook {
 
-    private List<Contact> contacts;
+    private List<User> contacts;
     
     public Phonebook() {
-        contacts = new ArrayList<Contact>();
+        contacts = new ArrayList<User>();
     }
 
     // create
-    public boolean add(Contact contact) {
+    public boolean add(User contact) {
         boolean flag = false;
         if (!contacts.contains(contact)) {
             contacts.add(contact);
@@ -24,7 +24,7 @@ public class Phonebook {
     }
 
     // read
-    public Contact getCotact(int index) {
+    public User getCotact(int index) {
         return contains(index) ? contacts.get(index) : null;
     }
 
@@ -32,7 +32,7 @@ public class Phonebook {
     // ???...
 
     // delete
-    public boolean remove(Contact contact) {
+    public boolean remove(User contact) {
         boolean flag = false;
         if (contacts.indexOf(contact) != -1) {
             contacts.remove(contact);
@@ -47,7 +47,7 @@ public class Phonebook {
                 && contacts.size() > index;
     }
 
-    public List<Contact> getContacts() {
+    public List<User> getContacts() {
         // if ???...
         return contacts;
     }

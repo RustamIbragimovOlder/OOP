@@ -5,6 +5,34 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "OOP_PracticalTasks.variant3.Main",
+            "projectName": "OOP_cffd4be7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "OOP_PracticalTasks.variant2.Main",
+            "projectName": "OOP_cffd4be7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "OOP_PracticalTasks.OOP_PT7_final_project.variant2.Main",
+            "projectName": "OOP_cffd4be7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "OOP_PracticalTasks.OOP_PT7_final_project.Main",
+            "projectName": "OOP_cffd4be7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "OOP_PracticalTasks.OOP_PT6_23jan.task1.Main",
             "projectName": "OOP_cffd4be7"
         },

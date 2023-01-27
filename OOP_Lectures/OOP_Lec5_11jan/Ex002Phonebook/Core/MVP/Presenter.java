@@ -25,11 +25,11 @@ public class Presenter {
 
     public void add() {
         model.currentBook().add(
-                new Contact(view.getFirstName(), view.getLastName(), view.getDescription()));
+                new User(view.getFirstName(), view.getLastName(), view.getDescription()));
     }
 
     public void remove() {
-        Contact contact = new Contact(view.getFirstName(), view.getLastName(), view.getDescription());
+        User contact = new User(view.getFirstName(), view.getLastName(), view.getDescription());
         model.currentBook().remove(contact);
 
         if (model.currentBook().count() < 1) {
@@ -43,7 +43,7 @@ public class Presenter {
             if (model.getCurrentIndex() < 0)
                 model.setCurrentIndex(0);
 
-            Contact temp = model.currentContact();
+            User temp = model.currentContact();
             view.setFirstName(temp.firstName);
             view.setLastName(temp.lastName);
             view.setDescription(temp.description);
@@ -58,7 +58,7 @@ public class Presenter {
         if (model.currentBook().count() > 0) {
             if (model.getCurrentIndex() + 1 < model.currentBook().count()) {
                 model.setCurrentIndex(model.getCurrentIndex() + 1);
-                Contact contact = model.currentContact();
+                User contact = model.currentContact();
                 view.setFirstName(contact.firstName);
                 view.setLastName(contact.lastName);
                 view.setDescription(contact.description);                
@@ -70,7 +70,7 @@ public class Presenter {
         if (model.currentBook().count() > 0) {
             if (model.getCurrentIndex() - 1 > -1) {
                 model.setCurrentIndex(model.getCurrentIndex() - 1);
-                Contact contact = model.currentContact();
+                User contact = model.currentContact();
                 view.setFirstName(contact.firstName);
                 view.setLastName(contact.lastName);
                 view.setDescription(contact.description);  

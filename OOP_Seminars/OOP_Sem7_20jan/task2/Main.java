@@ -56,7 +56,6 @@ public class Main {
         // new StudentView(studentService).showUsers();
 
 
-
         StudentService model = new StudentService();
         StudentController studentController = new StudentController(model, new StudentView(model));
 

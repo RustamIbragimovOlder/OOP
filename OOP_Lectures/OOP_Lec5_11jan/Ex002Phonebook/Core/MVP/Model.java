@@ -21,7 +21,7 @@ public class Model {
         this.path = path;
     }
 
-    public Contact currentContact() {
+    public User currentContact() {
         if (currentIndex >= 0) {
             return currentBook.getCotact(currentIndex);
         } else {
@@ -39,7 +39,7 @@ public class Model {
             while (fname != null) {
                 String lname = reader.readLine();
                 String description = reader.readLine();
-                this.currentBook.add(new Contact(fname, lname, description));
+                this.currentBook.add(new User(fname, lname, description));
                 fname = reader.readLine();
             }
             reader.close();
@@ -53,7 +53,7 @@ public class Model {
 
         try (FileWriter writer = new FileWriter(path, false)) {
             for (int i = 0; i < currentBook.count(); i++) {
-                Contact contact = currentBook.getCotact(i);
+                User contact = currentBook.getCotact(i);
                 writer.append(String.format("%s\n", contact.firstName));
                 writer.append(String.format("%s\n", contact.lastName));
                 writer.append(String.format("%s\n", contact.description));
